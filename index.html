@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head> 
+	<script src = "jquery-1.12.4.js"></script>
+	<link rel = "stylesheet" type = "text/css" href = "style.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Faster+One">
+	<script src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyBA2DlSBiROXu8bBvF8tECvZYMjm5pXPl0"></script>
+	<title>Traveling Salesman</title>
+</head>
+<body>
+	<div id = "header_container">
+		<h1 id = "header">The Traveling Salesman</h1>
+	</div>
+	<div id = "map"></div>
+	<div id = "text_container">
+		<p id = "intro">
+			The Traveling Salesman problem addresses the following question:
+			<p class = "quotes">
+				"Given a list of cities and the distances between each pair
+				of cities, what is the shortest possible route that visits each
+				city exactly once and returns to the origin city?"
+			</p>
+			To create your own traveling salesman problem and get the shortest 
+			route possible to your destinations, enter your home address and all
+			of your destinations below.
+		</p>
+		<form id = "home_form">
+			Home Address:<br><br>
+			<input id = "home"><br><br>
+			Number of Destinations:<br><br>
+			<input id = "num_destinations"><br><br>
+			<button type = "button" onclick = "submit_home_form()">Submit</button><br><br>
+		</form>
+		<form id = "destinations_form"></form>
+		<p id = "path"></p>
+		<p id = "total_distance"></p>
+	</div>
+	<script src = "remove_commas.js"></script>
+	<script src = "find_min.js"></script>
+	<script src = "map_scripts.js"></script>
+	<script src = "submit_forms.js"></script>
+</body>
+</html>
